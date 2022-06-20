@@ -32,6 +32,7 @@ Responsible for receiving messages from the queue and handling each one. Open a 
 $ cd app
 $ chmod +x startMongodb.sh
 $ ./startMongodb.sh
+$ npm install
 $ npm run start
 ```
 

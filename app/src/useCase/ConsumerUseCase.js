@@ -7,7 +7,7 @@ class ConsumerUseCase {
 
   async execute() {
     const consumerService = new ConsumerService();
-    await consumerService.execute(executeCallBack);
+    await consumerService.execute(this.executeCallBack);
   }
 
   async executeCallBack(historic) {
