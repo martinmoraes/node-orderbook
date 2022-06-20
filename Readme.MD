@@ -1,4 +1,4 @@
-# Mercado Livre - Code Challenge NodeJS
+# Mercado Livre - Code Challenge NodeJS OrderBook
 
 ## Setup
 - Install docker
@@ -8,21 +8,26 @@
 ```
 $ git clone https://github.com/martinmoraes/node-orderbook
 ```
-
+## Root folder
+Access the project root folder.
+```
+cd node-orderbook/
+```
 ## Start the kafka
-Responsible for keeping the queue. Run the following command from the project folder.
+Responsible for keeping the queue. Open a terminal and run the following commands from the project folder.
 ```
 $ cd kafga
 $ docker-compose up
 ```
 ## Start the API
-Responsible for receiving messages and putting them in the queue. Run the following command from the project folder.
+Responsible for receiving requestes and putting them in the queue. Open a terminal and run the following commands from the project folder.
 ```
 $ cd api
+$ npm install
 $ npm run start
 ```
 ## Start the APP
-Responsible for receiving messages from the queue and handling each one. Run the following command from the project folder.
+Responsible for receiving messages from the queue and handling each one. Open a terminal and run the following commands from the project folder.
 ```
 $ cd app
 $ chmod +x startMongodb.sh
