@@ -4,11 +4,12 @@ require('dotenv/config');
 class OrderUseCase {
   async execute(order) {
     const message = this.organizeMessage(order);
+    console.log(message);
     return await this.produce(message);
   }
 
   organizeMessage(order) {
-    const key = '' + order.client;
+    const key = `${order[0].client}`;
     if (!Array.isArray(order)) {
       return [{ key, value: JSON.stringify(order) }];
     }
