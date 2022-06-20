@@ -26,22 +26,34 @@ $ cd api
 $ npm install
 $ npm run start
 ```
-## Start the APP
-Responsible for receiving messages from the queue and handling each one. Open a terminal and run the following commands from the project folder.
+
+
+## Start MongoDB
+Run the following instructions
+```
+$ docker run -d --rm -p 27017:27017 --name mongodb-book \
+	-e MONGO_INITDB_ROOT_USERNAME=book \
+	-e MONGO_INITDB_ROOT_PASSWORD=book \
+mongo
+```
+or for Linux environment. 
 ```
 $ cd app
 $ chmod +x startMongodb.sh
 $ ./startMongodb.sh
+```
+
+
+## Start the APP
+Responsible for receiving messages from the queue and handling each one. Open a terminal and run the following commands from the project folder.
+```
+$ cd app
 $ npm install
 $ npm run start
 ```
 
 
-
-
-
-
-API are under port 3333
+#API are under port 3333
 
 #### POST /order
 
