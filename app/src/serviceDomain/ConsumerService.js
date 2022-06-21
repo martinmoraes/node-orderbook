@@ -37,7 +37,7 @@ class ConsumerService {
         datatime = datatime.toISOString();
         historic.message.datatime = datatime;
 
-        executeCallBack(historic);
+        await executeCallBack(historic);
       },
     });
   }
